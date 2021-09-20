@@ -388,7 +388,29 @@ img {
 
 .pacotes {
 	display: flex;
+	position: relative;
 	overflow-x: auto;
+}
+
+.pacotes::after {
+	content: "→";
+	position: absolute;
+	font-size: 3.6rem;
+	font-weight: 900;
+	color: red;
+	top: .5rem;
+	right: 5.2rem;
+	animation: arrow .5s ease-in 0s infinite alternate;
+}
+
+@keyframes arrow {
+	from {
+		right: 5.2rem;
+	}
+
+	to {
+		right: 3.2rem;
+	}
 }
 
 .pacote {
@@ -427,6 +449,41 @@ img {
 	font-size: 1.6rem;
 	justify-content: space-between;
 	align-items: center;
+}
+
+@media screen and (min-width: 805px) {
+	.pacotes {
+		flex-wrap: wrap;
+		justify-content: space-between;
+		overflow: visible;
+		padding-bottom: 3.2rem;
+	}
+
+	.pacote {
+		transition: var(--transition);
+	}
+
+	.pacote:hover {
+		transform: scale(1.02);
+	}
+
+	.pacotes::after {
+		content: "";
+	}
+
+	.pacote + .pacote {
+		margin: 0;
+	}
+
+	.pacote:nth-child(n + 3) {
+		margin-top: 3rem;
+	}
+}
+
+@media screen and (min-width: 1150px) {
+	.pacote:nth-child(3) {
+		margin-top: 0;
+	}
 }
 
 /**********************************/
