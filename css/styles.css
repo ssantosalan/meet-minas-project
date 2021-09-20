@@ -386,7 +386,16 @@ img {
 /* 6. Pacotes 
 /**********************************/
 
+.pacote {
+	background: var(--clr-light-green);
+	max-width: 37rem;
+	cursor: pointer;
+	box-shadow: var(--dark-shadow);
+}
 
+.pacote__info {
+	padding: 1.6rem;
+}
 
 /**********************************/
 /* 7. Newsletter
