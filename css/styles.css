@@ -172,9 +172,7 @@ img {
 
 	.navbar {
 		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		padding: .8rem 1.6rem;
+		
 	}
 
 	.navbar-list__link:hover {
